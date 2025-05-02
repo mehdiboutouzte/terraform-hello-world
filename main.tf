@@ -9,6 +9,10 @@ terraform {
       version = "6.33.0"
     }
   }
+  backend "gcs" {
+    bucket  = "terraform-backend-argocd-workflow"
+    prefix  = "terraform/"
+  }
 }
 
 provider "local" {}
